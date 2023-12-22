@@ -1,0 +1,63 @@
+
+
+
+h1{
+    padding: 0;margin: 0;
+}
+.createModulePage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.createModuleWrapper{
+    max-width: 860px;
+    width: 100%;
+    margin-top: 75px;
+}
+.createTitle{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 36px;
+    color: #7D7D7D;
+}
+.titleBlock{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.createModuleButton{
+    color: white;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    padding: 5px 27px;
+    background: #2815FF;
+    border: none;
+    border-radius: 10px;
+}
+.createWordTitle{
+    margin-top: 64px;
+}
+.itemsWords{
+    display: flex;
+    padding-bottom: 90px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.addTerm{
+    font-family: 'Montserrat';
+    font-size: 22px;
+    padding: 25px 274px;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-top: 42px;
+    background: #2815FF;
+    border: none;
+}

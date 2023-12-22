@@ -1,0 +1,19 @@
+.memorizationBlock{
+    height: calc(100vh - 140px);
+    margin-top: 30px;
+}
+.swiper{
+    height: 100%;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+}
+
+
+.swiperSlide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

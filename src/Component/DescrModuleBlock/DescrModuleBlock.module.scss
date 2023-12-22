@@ -1,0 +1,57 @@
+.descrModuleWrapper{
+    margin-top: 34px;
+    width: 100%;
+}
+
+.nameBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nameModule{
+    margin-right: 10px;
+    max-width: 757px;
+    width: 100%;
+    outline: none;
+    background: #ECECEC;
+    padding: 18px 14px;
+    border: none;
+    border-radius: 20px 0px 0px 0px;
+    &::placeholder{
+        font-family: 'Montserrat';
+        font-weight: 400;
+        color: #B0B0B0;
+        font-size: 14px;
+    }
+}
+.imgFile{
+    display: none;
+}
+.fileBlock{
+    padding: 6px 14px;
+    background: #ECECEC;
+    border-radius: 0px 5px 5px 0px;
+    img{
+        width: 32px;
+    }
+}
+.descrBlock{
+    width: 100%;
+}
+.createDescr{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0px 120px 20px;
+    outline: none;
+    background: #ECECEC;
+    margin-top: 34px;
+    border: none;
+    border-radius: 0px 0px 20px 20px;
+    &::placeholder{
+        font-family: 'Montserrat';
+        font-weight: 400;
+        color: #B0B0B0;
+        font-size: 14px;
+    }
+}

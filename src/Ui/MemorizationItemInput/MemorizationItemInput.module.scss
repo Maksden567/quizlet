@@ -1,0 +1,172 @@
+.cardItemFront {
+    width: 890px;
+    height: 539px;
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 3px #a5a5a5;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.buttonBlock{
+    display: flex;
+    width: 92%;
+    justify-content: flex-end;
+   
+    margin-top: 20px;
+}
+
+.answers{
+    width: 90%;
+    margin-top: 20px;
+}
+
+
+.emptyLabel{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    color: #a50000;
+}
+
+.rightAnswer{
+    width: 90%;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(89, 232, 181,0.76);
+    margin-top: 20px;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 10px;
+   h1{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+   }
+}
+
+.incorectAnswer{
+    width: 90%;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 118, 113,0.64);
+    margin-top: 20px;
+    margin: 0;
+    color: #000000;
+   h1{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+   }
+}
+
+.button{
+    background-color: #2815FF;
+    border: none;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    padding-right: 16px;
+    padding: 10px 22px;
+    cursor: pointer;
+}
+
+.Textblock {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    margin-top:70px;
+
+    
+}
+
+
+.itemSuccses{
+    margin: 0;
+    height: 0;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    h1{
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        color: #888888;
+    }
+}
+
+
+.inputBlock{
+    width: 100%;
+    padding-left: 16px;
+    box-sizing: border-box;
+}
+
+
+.input{
+   
+    width: 90%;
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #c0c0c0;
+    margin-top: 20px;
+    color: #000000;
+    font-size: 20px;
+}
+
+.input::placeholder{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: #848484;
+
+}
+
+.imageBlock{
+    width: 370px;
+    img{
+        width: 100%;
+    }
+}
+
+.TextblockFlex {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    margin-top: 70px;
+    
+   
+}

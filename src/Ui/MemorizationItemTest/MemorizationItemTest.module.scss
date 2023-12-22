@@ -1,0 +1,140 @@
+.Textblock {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+   margin-top:15px;
+    
+}
+
+.TextblockFlex {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    
+   
+}
+.imageBlock{
+    width: 150px;
+    img{
+        width: 100%;
+    }
+}
+.buttons{
+    padding: 0px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex-direction: column;
+
+}
+.textSelected{
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 15px;
+   color:#888888;
+}
+.answers{
+    margin-top: 20px;
+display: flex;
+flex-wrap: wrap;
+width: 505px;
+
+}
+.buttonsCenter{
+    margin-top: 40px;
+}
+.MemorizationItemTestButton{
+    max-width: 240px;
+    width: 100%;
+    
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+    padding: 10px 0px;
+    border: 1px solid #5e5e5e;
+    background: none;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 14px;
+   color:#2c2c2c;
+   cursor: pointer;
+}
+
+.button{
+    background-color: #2815FF;
+    border: none;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    padding: 20px 40px;
+    cursor: pointer;
+    margin-top: 400px;
+}
+
+.MemorizationItemTestButtonRight{
+
+    background-color: #59E8B5;
+    opacity: 0.56;
+    position: relative;
+   
+}
+
+.MemorizationItemTestButtonRight::before{
+  
+        width: 27px;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        height: 27px;
+        content: "";
+        background-image: url("../../assets/trueanswer.png");
+        display:block;
+        position:absolute;
+}
+
+
+.MemorizationItemTestButtonNegative{
+    background-color: #FF7671;
+    opacity: 0.64;
+    position: relative;
+}
+
+.MemorizationItemTestButtonNegative::before{
+  
+    width: 30px;
+    position: absolute;
+    top: 9px;
+    left: 7px;
+    height: 20px;
+    content: "";
+    background-image: url("../../assets/falseAnswer.png");
+    display:block;
+    position:absolute;
+}
+
+.MemorizationItemTestButtonActive{
+    max-width: 240px;
+    width: 100%;
+    border-radius: 15px;
+    margin-right: 10px;
+     margin-bottom: 10px;
+    padding: 10px 0px;
+    border: 1px solid #5e5e5e;
+    background: #969696;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 14px;
+   color:#2c2c2c;
+   cursor: pointer;
+}

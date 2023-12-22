@@ -1,0 +1,144 @@
+.cardItem {
+    width: 570px;
+    height: 300px;
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 3px #a5a5a5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+
+
+
+}
+
+.imageBlock {}
+
+.Textblock {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0px 50px;
+    box-sizing: border-box;
+   margin-top: 40px;
+    
+}
+
+.TextblockFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 50px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    
+   
+}
+
+.card {
+    position: relative;
+    height: 300px;
+    width: 570px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.cardItemTitle {
+    margin-right: 20px;
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 28px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        color: #313131;
+        word-break: break-all;
+
+    }
+}
+
+.cardItemFront {
+    width: 570px;
+    height: 300px;
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 3px #a5a5a5;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    transform: rotateY(0deg);
+    transition: all ease 0.5s;
+    z-index: 101;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.cardItemFrontActive {
+    width: 570px;
+    height: 300px;
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 3px #a5a5a5;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    transform: rotateY(180deg);
+    transition: all ease 0.5s;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.cardItemBackActive {
+    width: 570px;
+    height: 300px;
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 3px #a5a5a5;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    transform: rotateY(180deg);
+    transition: all ease 0.5s;
+    z-index: 100;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+
+.cardItemBack {
+    width: 570px;
+    height: 300px;
+    background-color: #EEEEEE;
+    box-shadow: 10px 10px 3px #a5a5a5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    transform: rotateY(360deg);
+    margin-bottom: 40px;
+    transition: all ease 0.5s;
+    z-index: 100;
+
+}
+
+
+
+.headerItem {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    padding-top: 30px;
+    width: 100%;
+    flex-direction: row-reverse;
+
+}

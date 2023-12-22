@@ -1,0 +1,42 @@
+.telegramBlock{
+    position: relative;
+  box-sizing: border-box;
+  border: none; /* Add this line */
+  outline: none;
+}
+
+
+.background{
+    width: 100%;
+}
+.photoCorner{
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+.generalTelegramInformation{
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    max-width: 420px;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Montserrat";
+    background-color:#0288C7 ;
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.telegramBtn{
+    border: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-family: 'Roboto';
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    background-color: #2815FF;
+    width: 100%;
+}

@@ -1,0 +1,20 @@
+.accontBLock{
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin-top: 50px;
+    
+}
+.accontBLockWrapper{
+    max-width: 550px;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center ;
+    border-radius: 10px;
+   padding-left: 20px;
+}

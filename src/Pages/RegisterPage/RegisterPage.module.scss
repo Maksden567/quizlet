@@ -1,0 +1,23 @@
+.titleBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.loginTitle{
+font-family: 'Montserrat';
+font-weight: 500;
+font-size: 40px;
+margin: 0;
+padding: 0;
+}
+.img{
+    margin-top: 10px;
+    width: 50px;
+}
+.registerPage{
+    padding-bottom: 40px;
+}
+.isAccount{
+    display: flex;
+}
