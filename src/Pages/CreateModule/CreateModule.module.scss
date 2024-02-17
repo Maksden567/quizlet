@@ -1,0 +1,295 @@
+
+
+
+h1{
+    padding: 0;margin: 0;
+}
+.createModulePage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.createModuleWrapper{
+    max-width: 860px;
+    width: 100%;
+    margin-top: 75px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+.createTitle{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 36px;
+    color: #7D7D7D;
+}
+.titleBlock{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.createModuleButton{
+    color: white;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    padding: 5px 27px;
+    background: #2815FF;
+    border: none;
+    border-radius: 10px;
+}
+.createWordTitle{
+    margin-top: 64px;
+}
+.itemsWords{
+    display: flex;
+    padding-bottom: 90px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.addTerm{
+    font-family: 'Montserrat';
+    font-size: 21px;
+    padding: 25px 274px;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin-top: 42px;
+    background: #2815FF;
+    border: none;
+}
+.alert {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to right, #4CAF50 , #5cb85c);
+    opacity: 0.9; /* Прозорість алерту */
+  }
+  
+  .alert .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .alert .message {
+    font-size: 16px;
+    font-family: 'Montserrat';
+    text-align: center;
+    flex-grow: 1;
+  }
+  
+
+  .alert .icon::before,
+  .alert .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  .alertNegative {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #f44336; /* Червоний колір */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alertNegative .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  .alertNegative .messageNegative {
+    font-size: 16px;
+    font-family: 'Montserrat';
+  }
+  
+  .alert.error .icon::before {
+    content: '\2717'; /* Значок хрестика */
+  }
+  
+  .alert .icon::before,
+  .alert .icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  
+@media screen and (max-width:970px) {
+    .addTerm{
+        font-family: 'Montserrat';
+        font-size: 20px;
+        padding: 22px 250px;
+        color: white;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px;
+        margin-top: 42px;
+        background: #2815FF;
+        border: none;
+    }
+    .createTitle{
+        font-size: 33px;
+        
+    }
+}
+@media screen and (max-width:850px) {
+    .createTitle{
+        font-size: 31px;
+       
+    }
+    .addTerm{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:850px) {
+    .createTitle{
+        font-size: 29px;
+        
+    }
+    .addTerm{
+        font-size: 16px;
+        padding: 22px 225px;
+    }
+    .createModuleButton{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:710px) {
+    
+    .addTerm{
+        font-size: 16px;
+        padding: 22px 180px;
+    }
+    .createTitle{
+        font-size: 27px;
+        
+    }
+}
+@media screen and (max-width:620px) {
+    
+    .addTerm{
+        font-size: 15px;
+        padding: 22px 130px;
+    }
+    .createModuleButton{
+        font-size: 12px;
+    }
+    .createTitle{
+        font-size: 25px;
+        
+    }
+}
+@media screen and (max-width:530px) {
+    
+    
+    .createTitle{
+        font-size: 22px;
+        
+    }
+}
+@media screen and (max-width:620px) {
+    
+    .addTerm{
+        font-size: 15px;
+        padding: 22px 100px;
+    }
+    .createModuleButton{
+        font-size: 11px;
+    }
+    .createTitle{
+        font-size: 22px;
+        
+    }
+    .itemsWords{
+        padding-bottom: 45px;
+    }
+}
+@media screen and (max-width:460px) {
+    .createTitle{
+        font-size: 19px;
+        
+    }
+    .addTerm{
+        font-size: 14px;
+        padding: 22px 80px;
+    }
+}
+@media screen and (max-width:400px) {
+    .createTitle{
+        font-size: 16px;
+        
+    }
+    .createModuleButton{
+        font-size: 9px;
+    }
+    .addTerm{
+        font-size: 13px;
+        padding: 17px 77px;
+    }
+}
+@media screen and (max-width:365px) {
+    .createTitle{
+        font-size: 16px;
+        
+    }
+    .createModuleButton{
+        font-size: 9px;
+    }
+    .addTerm{
+        font-size: 11px;
+        padding: 17px 77px;
+    }
+    .createModuleWrapper{
+        
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+@media screen and (max-width:365px) {
+    .createTitle{
+        font-size: 14px;
+        
+    }
+    .createModuleButton{
+        font-size: 8px;
+    }
+    .addTerm{
+        font-size: 11px;
+        padding: 17px 77px;
+    }
+    .createModuleWrapper{
+        
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+@media screen and (max-width:365px) {
+    .addTerm{
+        font-size: 10px;
+       
+    }
+   
+}

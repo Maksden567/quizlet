@@ -1,0 +1,42 @@
+
+.searchItem{
+   
+    margin-left: 76px;
+}
+.inputWrapper{
+    display: flex;
+    align-items: center;
+}
+.button{
+    margin-left: 18px;
+    background: none;
+    border: 0;
+}
+.inputSearch{
+
+    min-width: 400px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 30px;
+    border-radius: 30px;
+    border: none;
+    background: #F2F2F2;
+    outline: none;
+    
+}
+.inputBlock {
+    position: relative;
+}
+.inputBlock::after {
+    content: '';
+    display: block;
+   background: url("../../assets/inputSearch.png");
+   background-position: center;
+   background-repeat: no-repeat;
+   width: 10px;
+   height: 10px;
+   position: absolute;
+   z-index: 1000;
+   top: 12px;
+   left: 10px;
+}

@@ -1,0 +1,14 @@
+.gamesItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 72px;
+    margin-bottom: 50px;
+}
+@media screen and (max-width:755px) {
+    .gamesItems{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}

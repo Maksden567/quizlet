@@ -1,0 +1,33 @@
+.inputBlock{
+    width: 75%;
+   
+    padding-top: 30px;
+}
+
+.inputTitle{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 14px;
+}
+.input{
+    max-width: 1062px;
+    width: 100%;
+    padding: 21px 34px;
+    background: #ECECEC;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    color: #858585;
+    box-shadow: 1px 4px 4px rgba($color: #000000, $alpha: 0.25);
+}
+.input::placeholder{
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 18px;
+    color: #858585;
+}

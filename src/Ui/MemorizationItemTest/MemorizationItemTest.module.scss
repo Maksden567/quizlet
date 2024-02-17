@@ -1,0 +1,246 @@
+.Textblock {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0px 15px;
+    box-sizing: border-box;
+   margin-top:15px;
+    
+}
+
+.TextblockFlex {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    
+   
+}
+
+.cardItemTitle {
+    margin-right: 20px;
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 28px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        color: #313131;
+        word-break: break-all;
+
+    }
+}
+.imageBlock{
+    width: 120px;
+    img{
+        width: 100%;
+        height: 100px;
+    }
+}
+.buttons{
+    padding: 0px 20px;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    flex-direction: column;
+
+}
+.textSelected{
+    font-family: "Montserrat";
+    font-weight: 800;
+    font-size: 15px;
+   color:#888888;
+}
+.answers{
+    margin-top: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+width: 505px;
+
+}
+.buttonsCenter{
+    margin-top: 40px;
+}
+.MemorizationItemTestButton{
+    max-width: 240px;
+    width: 100%;
+    
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+    padding: 10px 0px;
+    border: 1px solid #5e5e5e;
+    background: none;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 14px;
+   color:#2c2c2c;
+   cursor: pointer;
+}
+
+.button{
+    background-color: #2815FF;
+    border: none;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    padding: 20px 40px;
+    cursor: pointer;
+    margin-top: 450px;
+}
+
+.MemorizationItemTestButtonRight{
+
+    background-color: #59E8B5;
+    opacity: 0.56;
+    position: relative;
+   
+}
+
+.MemorizationItemTestButtonRight::before{
+  
+        width: 27px;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        height: 27px;
+        content: "";
+        background-image: url("../../assets/trueanswer.png");
+        display:block;
+        position:absolute;
+}
+
+
+.MemorizationItemTestButtonNegative{
+    background-color: #FF7671;
+    opacity: 0.64;
+    position: relative;
+}
+
+.MemorizationItemTestButtonNegative::before{
+  
+    width: 30px;
+    position: absolute;
+    top: 9px;
+    left: 7px;
+    height: 20px;
+    content: "";
+    background-image: url("../../assets/falseAnswer.png");
+    display:block;
+    position:absolute;
+}
+
+
+.MemorizationItemTestButtonActive{
+    max-width: 240px;
+    width: 100%;
+    border-radius: 15px;
+    margin-right: 10px;
+     margin-bottom: 10px;
+    padding: 10px 0px;
+    border: 1px solid #5e5e5e;
+    background: #969696;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 14px;
+   color:#2c2c2c;
+   cursor: pointer;
+
+}
+
+
+@media screen and (max-width:768px) {
+    .textSelected {
+        font-size: 12px;
+    }
+    .cardItemFront{
+        width: 490px;
+        height: 280px;
+      
+    }
+    .button{
+
+        margin-top: 450px;
+
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .textSelected {
+        font-size: 12px;
+    }
+    
+    .MemorizationItemTestButtonActive{
+        max-width: 200px;
+        
+    }
+    .MemorizationItemTestButton{
+        max-width: 200px;
+        
+    }
+
+    .answers{
+        width: 430px;
+    }
+}
+
+@media screen and (max-width:455px) {
+    
+    .answers{
+        width: 281px;
+    }
+    .MemorizationItemTestButtonActive{
+        max-width: 150px;
+        
+    }
+    .MemorizationItemTestButton{
+        max-width: 150px;
+        
+    }
+    .button{
+
+        margin-top: 500px;
+
+    }
+  
+
+}
+@media screen and (max-width:400px) {
+    
+    .answers{
+        width: 225px;
+    }
+    .MemorizationItemTestButtonActive{
+        max-width: 150px;
+        
+    }
+    .MemorizationItemTestButton{
+        max-width: 150px;
+        
+    }
+    .imageBlock{
+        width: 80px;
+        img{
+            width: 100%;
+            height: 60px;
+        }
+    }
+    .Textblock{
+        margin-bottom: 20px;
+    }
+    .headerItem{
+        padding-top: 29px;
+    }
+}

@@ -1,0 +1,57 @@
+.moduleBlock{
+    width: 100%;
+    height: calc(100vh - 77px);
+    img{
+    width: 100%;
+   height: 100%;
+   opacity: 0.48;
+    }
+}
+.mainBlockTitle{
+    position: absolute;
+    top: 100px;
+    right: 18px;
+    max-width: 702px;
+    width: 100%;
+    h1{
+        font-family: 'Montserrat';
+        font-size: 28px;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.mainButton{
+    
+    
+        padding: 10px 60px;
+        font-family: 'Montserrat';
+        font-size: 18px;
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+        background: #2815FF;
+        border: none;
+        margin-top: 20px;
+    
+}
+
+.paragraph{
+    max-width: 500px;
+    p{
+      
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 500;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.moduleBlock{
+    position: relative;
+    background-color: black;
+}

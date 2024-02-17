@@ -1,0 +1,162 @@
+.wordItem{
+    max-width: 500px;
+    width: 100%;
+    border : 1px solid #000000;
+    border-radius: 10px;
+    margin-right: 80px;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+}
+.wordItemWrapper{
+    margin-left: 8px;
+    padding: 14px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+}
+.wordTitleAndTranslate{
+    font-size: 15px;
+    font-family: "Montserrat";
+    font-weight: 700;
+   
+    word-break: break-all;
+    margin-right: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.wordImage{
+    max-width: 160px;
+    height: 153px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.wordTextWithImage{
+    display: flex;
+    align-items: center;
+}
+.button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.logoItem{
+    padding: 6px 12px 3px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: end;
+}
+.blockActivities{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 22px;
+}
+.wordItem:nth-child(2n) {
+   margin-right: 0;
+  }
+
+  .star{
+    width: 25px;
+    height: 25px;
+  }
+
+
+ .wordItem:last-child{
+    margin-right: 0;
+ } 
+ .blockSound{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+ }
+ .logo{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+ }
+
+ @media screen and (max-width:1100px) {
+    .wordItem{
+        max-width: 400px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+    }
+    .wordImage{
+        max-width: 120px;
+        height: 96px;
+    }
+    .logoItem {
+        img{
+            width: 45px;
+        }
+    }
+    .wordTitleAndTranslate{
+        font-size: 13px;
+    }
+    .titleWords{
+        font-size: 30px;
+    }
+ }
+
+ @media screen and (max-width:900px) {
+    .wordItem{
+        max-width: 360px;
+       
+    }
+    
+ }
+
+ @media screen and (max-width:900px) {
+    .wordItem{
+        max-width: 330px;
+       
+    }
+    .wordImage{
+        max-width: 105px;
+        height: 85px;
+    }
+ }
+ @media screen and (max-width:755px) {
+    
+    .wordItem{
+        margin-right: 0;
+    }
+ }
+
+ 
+ @media screen and (max-width:900px) {
+    .wordItem{
+        max-width: 295px;
+       
+    }
+    .wordImage{
+        max-width: 95px;
+        height: 75px;
+    }
+ }
+
+ @media screen and (max-width:900px) {
+    .wordItem{
+        max-width: 270px;
+       
+    }
+    .wordImage{
+        max-width: 75px;
+        height: 65px;
+    }
+    .wordItemWrapper {
+        padding: 6px;
+        padding-bottom: 12px;
+     
+    .wordTitleAndTranslate{
+            font-size: 11px;
+        }   
+    }
+ }
