@@ -1,5 +1,5 @@
 import styles from './NavBar.module.scss'
-
+import { Link } from 'react-router-dom'
 
 function NavBar() {
 
@@ -9,8 +9,10 @@ function NavBar() {
    <div className={styles.navBar}>
         <nav>
             <ul className={styles.menu}>
-                <li className={styles.menuItem}><a className={styles.menuLink} href="#">Головна</a></li>
-                <li className={styles.menuItem}><a className={styles.menuLink} href="#">Мої модулі</a></li>
+                <li className={styles.menuItem}><Link className={styles.menuLink} to={'/'}>Головна
+                </Link></li>
+                <li className={styles.menuItem}><Link className={styles.menuLink} to={'/modules'}>Мої модулі
+                </Link></li>
             </ul>
         </nav>
    </div>

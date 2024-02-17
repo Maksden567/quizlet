@@ -21,3 +21,30 @@ padding: 0;
 .isAccount{
     display: flex;
 }
+
+@media screen and (max-width:820px) {
+    .loginTitle{
+        font-size: 30px;
+    }
+    .img{
+        width: 40px;
+    }
+}
+
+
+@media screen and (max-width:540px) {
+    .loginTitle{
+        font-size: 25px;
+    }
+    .img{
+        width: 30px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    .isAccount{
+        
+    }
+}

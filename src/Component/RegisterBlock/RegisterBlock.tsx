@@ -15,14 +15,20 @@ const RegisterBlock = ()=>{
     }
 
     return <div className={styles.inputBlocks}>
+        <div className={styles.wrapper}>
 
         <InputUser title='ЕЛЕКТРОННА АДРЕСА' placeholder="Введіть електрону адресу або введіть імя користувача" setEmail={setEmail}/>
         <InputUser title='ІМЯ КОРИСТУВАЧВ' placeholder="Введіть нікнейм користувача" setUserName={setUserName}/>
         <InputUser title='ПАРОЛЬ' placeholder="Введіть пароль від свого облікового запису" setPassword={setPassword}/>
+        <div className={styles.button}>
         <div className={styles.isAccount}>
             <p>Маєш акаунт, мерщій <a href="#"> заходь</a></p>
             <button className={styles.loginBtn} onClick={auth}> ЗАРЕЄСТРУВАТИСЯ</button>
         </div>
+        </div>
+        </div>
+       
+        
         
     </div>
 }

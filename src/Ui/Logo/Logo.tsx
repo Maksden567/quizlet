@@ -1,5 +1,6 @@
 import styles from './Logo.module.scss'
 import logo from '../../assets/logo.png'
+import {Link} from 'react-router-dom'
 
 function Logo() {
 
@@ -7,7 +8,10 @@ function Logo() {
   return (
     <>
    <div className={styles.logo}>
-        <img src={logo} alt="" />
+    <Link to={'/'}>
+      <img src={logo} alt=""  />
+    </Link>
+        
    </div>
       
     </>

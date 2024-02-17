@@ -14,7 +14,7 @@ const LoginPage = ()=>{
           
         </div>
            <AuthBlock/>
-           <AccontDontHave/>
+           
         </div>
     )
 }

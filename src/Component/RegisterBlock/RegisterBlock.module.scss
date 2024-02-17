@@ -4,6 +4,7 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    
 }
 .loginBtn{
     padding: 16px 130px;
@@ -23,7 +24,7 @@ p{
 }
 .isAccount {
     margin-top: 43px;
-    width: 74%;
+    width: 100%;
     display: flex;
     font-family: "Montserrat";
     font-size: 16px;
@@ -31,3 +32,48 @@ p{
     justify-content: space-between;
     align-items: center;
 }
+
+.button{
+      max-width: 1000px;
+      width: 100%;
+     
+    
+}
+
+.wrapper{
+    max-width: 1000px;
+    width: 95%;
+    margin: 0px 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width:820px) {
+    
+.loginBtn{
+    padding: 16px 50px;
+    font-size: 20px;
+}
+    
+}
+
+@media screen and (max-width:650px) {
+    
+    .loginBtn{
+        padding: 16px 44px;
+        font-size: 14px;
+    }
+        
+}
+
+@media screen and (max-width:540px) {
+    
+    .isAccount {
+      
+        flex-direction: column-reverse;
+        p{
+            margin-top: 10px;
+        }
+    }
+        
+}
+

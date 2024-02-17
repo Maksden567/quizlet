@@ -1,6 +1,78 @@
 .header{
     display: flex;
-    padding: 20px 0px;
+    padding: 20px 100px;
     align-items: center;
-   justify-content: center;
+    justify-content: space-between;
+  }
+  .menu{
+    display: none;
+  }
+
+  @media screen and  (max-width:1550px) {
+    .header{
+        padding: 20px 35px;
+    }
+  }
+
+  @media screen and  (max-width:1320px) {
+    .header{
+       flex-direction: column;
+       height: 200px;
+      
+       
+    }
+    .hidden{
+        height: 0px;
+        overflow: hidden;
+        transition: all ease 1s;
+    }
+    .headerBlock{
+        height: 265px;
+        margin-top: -57px;
+        overflow: auto;
+        transition: all ease 1s;
+    }
+    .menu{
+        display: block;
+        border: none;
+        background: none;
+        padding: 10px;
+        cursor: pointer;
+        img{
+            width: 40px;
+            height: 40px;
+        }
+      }
+  }
+
+  @media screen and  (max-width:1320px) {
+
+    .menu{
+        img{
+            width: 30px;
+            height: 30px;
+        }
+      }
+
+  }
+
+  @media screen and  (max-width:1320px) {
+
+    .menu{
+        img{
+            width: 30px;
+            height: 30px;
+        }
+      }
+
+  }
+  @media screen and  (max-width:400px) {
+
+    .menu{
+        img{
+            width: 20px;
+            height: 20px;
+        }
+      }
+
   }

@@ -55,3 +55,181 @@
     position: relative;
     background-color: black;
 }
+
+@media screen and (max-width:1550px) {
+    .moduleBlock{
+            height: calc(100vh - 175px);
+    }
+    .mainBlockTitle{
+        right: 0;
+    }
+}
+
+
+@media screen and (max-width:1280px) {
+   
+    .mainBlockTitle{
+        max-width: 500px;
+        right: 60px;
+        h1{
+           font-size: 22px; 
+        }
+        
+    }
+    .paragraph{
+        p{
+            font-size: 14px; 
+        }
+    }
+}
+@media screen and (max-width:1050px) {
+    .moduleBlock{
+        height: calc(100vh - 260px);
+}
+    .mainBlockTitle {
+        max-width: 450px;
+        right: 30px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .mainBlockTitle{
+        max-width: 384px;
+        right: 36px;
+        h1{
+           font-size: 17px; 
+        }
+        
+    }
+    .paragraph{
+        p{
+            font-size: 12px; 
+        }
+    }
+    .moduleBlock{
+        height: calc(100vh - 360px);
+}
+}
+@media screen and (max-width:780px) {
+    .moduleBlock{
+        height: calc(100vh - 460px);
+}
+    .mainBlockTitle{
+        top: 60px;
+    }
+}
+
+
+
+@media screen and (max-width: 780px)
+{
+    .moduleBlock{
+        height: calc(100vh - 517px);
+    }
+    .mainBlockTitle{
+       top: 32px;
+    }
+}
+@media screen and (max-width:700px) {
+    .mainBlockTitle{
+        max-width: 290px;
+        right: 36px;
+        h1{
+           font-size: 14px; 
+        }
+        
+    }
+    .paragraph{
+        p{
+            font-size: 10px; 
+        }
+    }
+    .mainButton{
+        font-size: 14px;
+    
+}
+}
+@media screen and (max-width:605px)
+{
+    
+    .mainBlockTitle{
+        max-width: 270px;
+        right: 26px;
+        h1{
+           font-size: 12px; 
+        }
+        
+    }
+    .paragraph{
+        p{
+            font-size: 8px; 
+        }
+    }
+    .mainButton{
+        font-size: 12px;
+    
+}
+.moduleBlock{
+    height: calc(100vh - 560px);
+}
+}
+
+@media screen and (max-width:550px)
+{
+    
+    .mainBlockTitle{
+        max-width: 240px;    
+    }
+}
+
+@media screen and (max-width:550px)
+{
+    
+    .moduleBlock{
+        height: calc(100vh - 606px);
+    }
+    .mainBlockTitle{
+        max-width: 212px;
+        h1{
+           font-size: 10px; 
+        }
+        
+    }
+    .paragraph{
+        p{
+            font-size: 7px; 
+        }
+    }
+    .mainButton{
+        font-size: 10px;
+    
+}
+}
+
+@media screen and (max-width:400px)
+{
+    
+    .mainBlockTitle{
+        max-width: 163px;  
+        right: 15px; 
+    }
+    .mainBlockTitle{
+        h1{
+           font-size: 8px; 
+        }
+        
+    }
+    .paragraph{
+        p{
+            font-size: 6px; 
+        }
+    }
+    .mainButton{
+        font-size: 8px;
+        padding: 10px 30px;
+    
+}
+.moduleBlock{
+    height: calc(100vh - 622px);
+}
+}
