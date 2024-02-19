@@ -22,7 +22,7 @@ interface IArgWord{
 export const moduleApi = createApi({
     reducerPath: 'moduleApi',
     tagTypes:["Post"],
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://localhost:7894'}),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://localhost:5001'}),
     endpoints: (builder) => ({
 
         getLibraries: builder.query<IModule[]|string, void>({
