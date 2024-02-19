@@ -1,3 +1,4 @@
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/less/navigation';
@@ -10,8 +11,16 @@ import arrowRight from '../../assets/arrow-right.png'
 import arrowleft from '../../assets/arrow-left.png'
 import { FC, useRef } from 'react';
 import { ICartBlock } from './ICartBlock';
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/less/navigation';
+
+
+
 
 const CardBlock:FC<ICartBlock> = ({items}) => {
+
+
     const swiperRef = useRef<SwiperType>();
 
     return (
@@ -29,8 +38,7 @@ const CardBlock:FC<ICartBlock> = ({items}) => {
     >
 
     {items.map((item, index) => (
-      <SwiperSlide key={index} className={styles.swiperSlide} virtualIndex={index}><CardItem audioUrl={item.audioUrl} isSelect={item.isSelect} text={item.text} translateTitle={item.translateTitle} imgUrl={item.imgUrl}/></SwiperSlide>
-     
+      <SwiperSlide key={index} virtualIndex={index}><CardItem audioUrl={item.audioUrl} isSelect={item.isSelect} text={item.text} translateTitle={item.translateTitle} imgUrl={item.imgUrl}/></SwiperSlide>
       ))}
     </Swiper>
         </div>

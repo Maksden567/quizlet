@@ -42,6 +42,17 @@ const CreateWordItem:FC<ICreateWordItem> = ({isFinishCreate,item,words,setWords}
     }
     },[isFinishCreate])
     
+    const [translate,setTranslate]= useState('')
+
+    
+
+    if(item.id==number){
+     
+        words[number].title = title;
+        words[number].translate = translate;
+        
+        words[number].img=img
+    }
    
 
     
@@ -50,13 +61,12 @@ const CreateWordItem:FC<ICreateWordItem> = ({isFinishCreate,item,words,setWords}
         <div className={styles.createWordItem}>
             <CreateWordImg words={words} setImg={setImg} setTranslate={setTranslate} setTitle={setTitle}  setWords={setWords} setIndex={setIndex}  count={item.id} />
             <div className={styles.termBlock}>
-                <Term setIndex={setIndex} count={item.id} title={title} setTitle={setTitle}  name='Термін'/>
-                <Term setIndex={setIndex} count={item.id} title={translate} setTranslate={setTranslate}  name='Перевод.'/>
+                <Term setIndex={setIndex} count={item.id} title={words[number].title} setTitle={setTitle}  name='Термін'/>
+                <Term setIndex={setIndex} count={item.id} title={words[number].translate} setTranslate={setTranslate}  name='Перевод.'/>
             </div>
         </div>
     )
 
 }
-
 export default CreateWordItem
 

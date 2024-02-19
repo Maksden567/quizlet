@@ -32,11 +32,220 @@
 }
 .telegramBtn{
     border: none;
-    padding: 10px 30px;
-    font-size: 16px;
-    font-family: 'Roboto';
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 19px;
+    font-family: "Roboto";
     font-weight: 800;
     color: rgb(255, 255, 255);
     background-color: #2815FF;
     width: 100%;
+    margin-top: 38px;
 }
+
+@media screen and (max-width:1430px) {
+    .generalTelegramInformation{
+        top: 82px;
+        right: 110px;
+    }
+    .photoCorner{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .generalTelegramInformation{
+        font-size: 16px;
+        right: 70px;
+    }
+    
+}
+
+@media screen and (max-width:1170px) {
+    .generalTelegramInformation{
+        font-size: 14px;
+        right: 70px;
+        max-width: 360px;
+    }
+    
+}
+
+@media screen and (max-width:1050px) {
+    
+    .photoCorner{
+        width: 220px;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .generalTelegramInformation{
+        right: 35px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .generalTelegramInformation{
+        max-width: 310px;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .telegramBtn{
+        transform: rotate(-90deg);
+        padding: 21px 36px;
+        font-size: 15px;
+        width: 85%;
+        margin-left:255px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .photoCorner{
+        width: 150px;
+    }
+    .telegramBtn{
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    .generalTelegramInformation{
+        width: 277px;
+    }
+}
+
+@media screen and (max-width:677px) {
+    
+    .telegramBtn{
+        font-size: 11px;
+        margin-top: -15px;
+    }
+   
+}
+@media screen and (max-width:646px) {
+    .generalTelegramInformation{
+        width: 250px;
+        background: none;
+    }
+    .telegramBtn{
+        transform: rotate(0deg);
+        margin-left: 0;
+    }
+   .imgBtn{
+        width: 70px;
+        margin-left: -40px;
+   }
+   .fingerImg{
+    width: 25px;
+    padding-top: 10px;
+   }
+   .fingerBlock{
+    position: absolute;
+    top: -53px;
+    background-color:#0288C7 ;
+   }
+   .fingerDescr{
+    font-size: 12px;
+    width: 170px;
+    font-family: "Roboto";
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+   }
+   .telegramBtnImg{
+    position: relative;
+   
+   }
+}
+
+@media screen and (max-width:550px) {
+    .generalTelegramInformation {
+        width: 230px;
+        background: none;
+    }
+    .imgBtn{
+        width: 50px;
+        margin-left: -40px;
+   } 
+   .fingerBlock{
+    position: absolute;
+    top: -56px;
+    right: -143px;
+    background-color:#0288C7 ;
+   }
+}
+
+@media screen and (max-width:490px) {
+    .generalTelegramInformation {
+        width: 230px;
+        background: none;
+    }
+}
+@media screen and (max-width:490px) {
+    .fingerDescr {
+        font-size: 10px;
+        width: 120px;
+       
+    }
+    .imgBtn{
+        width: 36px;
+        margin-left: -40px;
+   } 
+   .fingerImg{
+    width: 17px;
+    padding-top: 10px;
+   }
+   .fingerBlock{
+    position: absolute;
+    top: -44px;
+    width: 120px;
+    right: -92px;
+    background-color:#0288C7 ;
+   }
+   .generalTelegramInformation {
+    width: 218px;
+    background: none;
+}
+.photoCorner{
+    width: 109px;
+}
+}
+
+@media screen and (max-width:470px) {
+    
+   .fingerBlock{
+    width: 120px;
+    top: -44px;
+    right: -96px;
+   }
+   .imgBtn {
+    width: 36px;
+    margin-left: -11px;
+}
+.fingerDescr {
+    font-size: 8px;
+   
+}
+}
+
+@media screen and (max-width:470px) {
+    .generalTelegramInformation {
+        width: 160px;
+        background: none;
+    }
+    .photoCorner{
+        width: 83px;
+    }
+    
+ }
+ @media screen and (max-width:370px) {
+    .generalTelegramInformation {
+        width: 140px;
+        background: none;
+    }
+    .photoCorner{
+        width: 83px;
+    }
+    .imgBtn {
+        width: 28px;
+        margin-left: -11px;
+    }
+ }

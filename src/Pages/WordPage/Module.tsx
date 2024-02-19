@@ -9,7 +9,7 @@ import GamePage from "../GamePage/GamePage";
 const WordPage = ()=>{
     return (
         <>
-        
+        <Header/>
         <SliderImagesWord/>
         <WordItems/>
         <GamesItems/>

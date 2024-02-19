@@ -11,10 +11,11 @@ const CreateWordImg:FC<IWordImg> = ({count,setImg,setIndex,words,setWords,setTit
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     const changeFile = (e:React.ChangeEvent<HTMLInputElement>)=>{
-        
+        console.log(1)
         if(e.target.files){
             setImg(e.target.files[0])
             count?setIndex(count):null
+            console.log(e.target.files[0])
         }
         
     }
@@ -50,6 +51,9 @@ const CreateWordImg:FC<IWordImg> = ({count,setImg,setIndex,words,setWords,setTit
            newWords.splice(count,1)
           
         }
+        
+        
+        console.log(newWords)
         setIndex(count)
         setWords([...newWords])
       }

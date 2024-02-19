@@ -10,7 +10,6 @@ const ModuleBlock = () => {
     useEffect(()=>{
        
     },[data])
-
     return (
 
         <div className={styles.moduleBlock}>
@@ -25,7 +24,7 @@ const ModuleBlock = () => {
                 <div className={styles.errorText}>У ВАС НЕ ЗНАЙДЕНО МОДУЛІВ</div>
             </div>:data?.map(item=><ModuleBlockItem  id= {item.id} countOfWords={27} date='12.10.2023' imgUrl={item.img?item.img:'../../assets/errorImg.png'} title={item.name}/>)}
             
-           
+    
             
             </div>
             </div>

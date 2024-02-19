@@ -3,13 +3,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import {Navigation} from 'swiper/modules';
 import { Swiper as SwiperType } from 'swiper';
 import { FC, useRef, useState } from 'react';
-import 'swiper/css';
-import 'swiper/less/navigation';
 import { ICartBlock } from '../CardBlock/ICartBlock';
 import './MemorizationBlock.css'
 
 // Import Swiper styles
-
+import 'swiper/css';
+import 'swiper/less/navigation';
 import MemorizationItemKnowen from '../../Ui/MemorizationItemKnowen/MemorizationItemKnowen';
 import { ICardItem } from '../../Ui/CardItem/ICardItem';
 import MemorizationItemTest from '../../Ui/MemorizationItemTest/MemorizationItemTest';
@@ -59,6 +58,9 @@ const MemorizationBlock:FC<ICartBlock> = ({items}) => {
     </Swiper>
         </div>
 
+<div className={styles.buttons}>
+
+</div>
 
 </>
 

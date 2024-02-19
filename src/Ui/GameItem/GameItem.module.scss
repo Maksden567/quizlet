@@ -13,8 +13,7 @@
 }
 
 .gameItemButton{
-    margin-right: 42px;
-    margin-bottom: 15px;
+   
     border-radius: 20px;
     cursor: pointer;
     border: none;
@@ -30,5 +29,39 @@
         font-weight: 800;
         text-transform: uppercase;
         font-family: 'Roboto';
+    }
+}
+
+@media screen and (max-width:725px) {
+    .gameItemButton{
+        width: 160px;
+        height: 145px;
+    }
+}
+@media screen and (max-width:600px) {
+    .gameItemButton{
+        width: 130px;
+        height: 115px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .gameItemButton{
+        margin-bottom: 15px;
+        width: 103px;
+        height: 96px;
+        h1{
+            font-size: 12px;
+        }
+    }
+}
+
+
+@media screen and (max-width:375px) {
+    .gameItemButton{
+        margin-bottom: 15px;
+        width: 90px;
+        height: 80px;
+       
     }
 }

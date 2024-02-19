@@ -3,7 +3,8 @@
     display: flex;
     justify-content: center;
     margin-top: 80px;
-  
+    height: calc(100vh - 420px);
+
     margin-bottom: 40px;
 }
 
@@ -11,10 +12,12 @@
     width: 100%;
 }
 
+
 .swiperSlide{
  display: flex;
  justify-content: center;
 }
+
 
 .swiper-button-next{
     width: 0px;

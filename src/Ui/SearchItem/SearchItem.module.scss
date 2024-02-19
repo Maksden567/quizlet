@@ -22,6 +22,7 @@
     border: none;
     background: #F2F2F2;
     outline: none;
+    margin-bottom: 20px;
     
 }
 .inputBlock {
@@ -39,4 +40,42 @@
    z-index: 1000;
    top: 12px;
    left: 10px;
+}
+
+@media screen and (max-width:1420px) {
+    .searchItem{
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width:1320px) {
+    .inputWrapper{
+        flex-direction: column;
+    }
+    .searchItem{
+        margin-left: 0px;
+    }
+   .buttons{
+    margin-right: 18px;
+   }
+}
+
+@media screen and (max-width:490px) {
+    .inputSearch{
+        min-width: 360px;
+        width: 360px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .inputSearch{
+        min-width: 320px;
+        width: 320px;
+    }
+}
+@media screen and (max-width:370px) {
+    .inputSearch{
+        min-width: 250px;
+        width: 250px;
+    }
 }

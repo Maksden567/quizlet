@@ -23,3 +23,49 @@
     font-family: 'Montserrat';
     color: rgb(241, 29, 29);
 }
+
+.wrapper{
+    max-width: 1000px;
+    width: 95%;
+    margin: 0px 20px;
+    box-sizing: border-box;
+}
+
+.blockAdd{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width:820px) {
+    
+    .loginBtn{
+        padding: 16px 50px;
+        font-size: 20px;
+    }
+        
+    }
+    
+    @media screen and (max-width:650px) {
+        
+        .loginBtn{
+            padding: 16px 44px;
+            font-size: 14px;
+        }
+            
+    }
+    
+
+    @media screen and (max-width:425px) {
+        
+        .blockAdd{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        .loginBtn{
+           max-width: 323px;
+           width: 100%;
+        }
+        
+            
+    }

@@ -6,4 +6,16 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
+
+}
+
+@media screen and (max-width:820px) {
+    .headerLogin{
+       margin-bottom: 25px;
+    }
+}
+@media screen and (max-width:540px) {
+    img{
+      width: 30px;
+    }
 }
