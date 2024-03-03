@@ -18,9 +18,6 @@ const DescrModuleBlock:FC<IDescrModule> = ({isFinishCreate,setName,setFile,nameM
 
     
 
-    const ChangeDescr = (e:React.ChangeEvent<HTMLInputElement>)=>{
-        setDescr(e.target.value)
-    }
 
     const ChangeFile = (e:React.ChangeEvent<HTMLInputElement>)=>{
         if(!e.target.files) return
@@ -57,8 +54,10 @@ const DescrModuleBlock:FC<IDescrModule> = ({isFinishCreate,setName,setFile,nameM
 
 
             <div className={styles.descrBlock}>
-                <input type="text"  className={styles.createDescr} placeholder='Додати опис...' onChange={(e)=>ChangeDescr(e)} />
+                <input type="text"  className={styles.createDescr} placeholder='Додати опис...'  />
             </div>
         </div>
     )
 }
+
+export default DescrModuleBlock

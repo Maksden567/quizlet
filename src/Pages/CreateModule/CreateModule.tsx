@@ -12,78 +12,70 @@ const CreateModule = ()=>{
 
     const [nameModule,setNameModule] = useState('') 
     const [errorMessage,setErrorMessage] = useState('') 
-    const [words,setWords] = useState<ICreateWord[]>([word,word,word])
-    let newWords:ICreateWord[] = [];
+    const [words,setWords] = useState<ICreateWord[]>([word(0),word(1),word(2)])
     const [isFinishCreate,setIsFinishCreate]=useState(false)
     const [file,setFile]=useState(null)
+    const [isSetWords,setIsSetWords]=useState(false)
     const [uploadPhoto,{data:imgUrl}] = useUploadPhotoMutation()
     const [createModuleAsync,{data:moduledata,isError,error}] = useCreateModuleMutation()
-    const [createWord]=useCreateWordMutation();
-    const [translateWord] = useTranslateWordMutation()
-    const [dataUrlmass,setDataUrlMass]=useState<any[]>()
+    const [translateFunction]= useTranslateWordMutation()
+    const [createWord]= useCreateWordMutation()
 
 
 
     const createModule = ()=>{
-        createModuleAsync({name:nameModule,img:imgUrl}).then(res=>{
-            if(res.error&& 'data' in res.error){
-                    let errorMessage:any = res.error.data
-                    setErrorMessage(errorMessage.value)
-                
-            }
-        })
-        if(error!=undefined && 'data' in error){
-            let errorMessage:any = error.data
-            setErrorMessage(errorMessage.value)
-        }
-        setNameModule('')
-        setIsFinishCreate(true)
-        setTimeout(()=>{
-            setIsFinishCreate(false)
-        },2000)
+       
+        createModuleAsync({name:nameModule,img:imgUrl})
     }
-    useEffect(()=>{
-        
+
+   
+    
+
+
+    useEffect(()=>{ 
         if(file){
             var data = new FormData()
             data.append('file', file)
             uploadPhoto(data)         
-        }
-       
+        }    
     },[file])
 
-    useEffect(()=>{
-       newWords.map(item=>{
-        translateWord(item.title).then(res => {
-            if (res.data) {
-                setDataUrlMass((prevDatareMass) => [...(prevDatareMass || []), res.data]);
-            }
-          });
-        })
-    },[moduledata])
 
-
-   useEffect(()=>{
-    
-    if(dataUrlmass?.length==newWords.length){
-        newWords.forEach((item,index)=>{
-          item.music=dataUrlmass[index]
-        })
-    }
-
-    if(dataUrlmass?.length==newWords.length){
-        const id = moduledata.id
-        newWords.map(item=>(
-            createWord({word:item,id})
-
-        ))
-    
-    }
-  
-
-   },[dataUrlmass])
  
-   
+
+
+
+    useEffect(()=>{
+       
+        if(moduledata){
+            console.log(moduledata.id)
+           const PromiseWords =  words.map(async(item)=>{
+            if(item.translate!=''){
+               const res= await translateFunction(item.translate)
+                item.music=res.data
+                return item
+                
+            }
+        })
+
+        Promise.all(PromiseWords).then((updateWords)=>{
+           updateWords.map(item=>{
+            if(item){
+                console.log(item)
+                createWord({word:item,id:moduledata.id})
+            }
+           
+           })
+        })
+        
+       
+    }
+    },[isSetWords,moduledata])
+ 
+
+ 
+
+
 
     return  (
         <div className={styles.createModulePage}>
@@ -107,16 +99,16 @@ const CreateModule = ()=>{
                     <h1 className={styles.createTitle}>Створити терміни</h1>
                 </div>
                 <div className={styles.itemsWords}>
-                   
+                 
                     {words.map((item, index) =>{
-                        const newItem = { ...item, id: index };
-                        newWords.push(newItem);
-                        return <CreateWordItem setWords={setWords} isFinishCreate={isFinishCreate} words={newWords} count = {index} item={newItem} key={index} />
+                        item.id=index
+                        console.log(index,item.id)
+                        return <CreateWordItem isSetWords={isSetWords} setWords={setWords} setIsSetWords={setIsSetWords} words={words} itemId={item.id} key={index} />
                         
-                        })} 
+                    })} 
                     <button className={styles.addTerm} onClick={()=>
                         
-                        setWords([...words,word])}>Додати ще один термін</button>
+                        setWords([...words,word(words.length)])}>Додати ще один термін</button>
                     
                 </div>
 

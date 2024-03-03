@@ -1,6 +1,6 @@
 export interface IWordItem {
-    img:string,
+    img:string|'',
     title:string,
     translate:string
-    audio?:string
+    audio:string
 }

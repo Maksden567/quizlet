@@ -1,31 +1,28 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { ICreateWord } from '../../Pages/CreateModule/ICreateWord'
 
 
-interface IModule  {
-    name: string
-    img?:string
-    id:number
+export interface IModule  {
+id:number
+img:string|undefined
+name:string
+userId:string 
+  
 }
 
-interface IWord {
-    title:string,
-    translate:string,
-    img:string|null,
-    music:string
-    
-}
+
 interface IArgWord{
-    word:IWord,
+    word:ICreateWord,
     id:number
 }
 
 export const moduleApi = createApi({
     reducerPath: 'moduleApi',
     tagTypes:["Post"],
-    baseQuery: fetchBaseQuery({ baseUrl: 'https://localhost:5001'}),
+    baseQuery: fetchBaseQuery({ baseUrl: 'https://localhost:7894'}),
     endpoints: (builder) => ({
 
-        getLibraries: builder.query<IModule[]|string, void>({
+        getLibraries: builder.query<IModule[]|string|[], void>({
             query: () => ({
                 url: 'getLibraries',
                 method: 'GET',
@@ -37,7 +34,7 @@ export const moduleApi = createApi({
         }),
         uploadPhoto: builder.mutation<string, FormData>({
         
-            query: (file) => ({
+            query: (file: any) => ({
                 url: 'uploadPhoto',
                 method: 'POST',
                 body:file,
@@ -49,9 +46,9 @@ export const moduleApi = createApi({
 
         }),
 
-        createModule: builder.mutation<any, IModule>({
+        createModule: builder.mutation<any, any>({
         
-            query: (file) => ({
+            query: (file: any) => ({
                 url: 'createLibraries',
                 method: 'POST',
                 body:file,
@@ -64,7 +61,7 @@ export const moduleApi = createApi({
         }),
         translateWord: builder.mutation<string, string>({
         
-            query: (musicString) => ({
+            query: (musicString:string) => ({
                 url: 'translateVoice',
                 method: 'POST',
                 body:musicString,
@@ -79,7 +76,7 @@ export const moduleApi = createApi({
             query: ({word,id}) => ({
                 url: `liabries/${id}/createWord`,
                 method: 'POST',
-                body:word,
+                body:{NameEnglish:word.title,TranslateName:word.translate,imageUrl:word.img,musicUrl:word.music},
                 credentials: "include",
                 mode: 'cors',
               
@@ -89,7 +86,7 @@ export const moduleApi = createApi({
 
         deleteWord: builder.mutation<string, number>({
         
-            query: (id) => ({
+            query: (id:number) => ({
                 url: `deleteOneLibraries/${id}`,
                 method: 'DELETE',
                 credentials: "include",

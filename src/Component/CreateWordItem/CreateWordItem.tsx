@@ -6,9 +6,8 @@ import { ICreateWordItem } from './ICreateWordItem'
 import { word } from '../../Pages/CreateModule/MockItem'
 import { useUploadPhotoMutation } from '../../store/rtk/useModule'
 
-const CreateWordItem:FC<ICreateWordItem> = ({isFinishCreate,item,words,setWords}) => {
+const CreateWordItem:FC<ICreateWordItem> = ({itemId,words,setWords,setIsSetWords,isSetWords}) => {
 
-    const [number, setIndex] = useState(0)
     const [title,setTitle]= useState('')
     const [img,setImg]= useState(null)
     const [imgUrl,setImgUrl]= useState('')
@@ -16,53 +15,73 @@ const CreateWordItem:FC<ICreateWordItem> = ({isFinishCreate,item,words,setWords}
     const [uploadPhoto] = useUploadPhotoMutation()
 
 
-    useEffect(()=>{
 
+    useEffect(()=>{
+        console.log(itemId)
         if(img){
             var data = new FormData()
             data.append('file', img)
+         
             uploadPhoto(data).then(res=>setImgUrl(res.data))    
-        }
-
+        } 
     },[img])
 
 
-    if(item.id==number){
-        
-        words[number].title = title;
-        words[number].translate = translate;
-        words[number].img=imgUrl
-    }
 
     useEffect(()=>{
-        if(isFinishCreate){
-            setTitle('')
-            setTranslate('')
-            setImg(null)
-    }
-    },[isFinishCreate])
     
-    const [translate,setTranslate]= useState('')
-
-    
-
-    if(item.id==number){
-     
-        words[number].title = title;
-        words[number].translate = translate;
         
-        words[number].img=img
-    }
+        
+       if(translate!=''||title!=''){
+
+        let item =  words.find(el=>el.id==itemId)
+    
+        if(item){
+            item.title=title
+            item.translate=translate
+            
+            words.splice(itemId,1,item)
+        
+            setIsSetWords(!isSetWords)
+            setWords(words)
+        }
+       
+       }
+       
+
+      
+
+    },[title,translate])
+
+
+    useEffect(()=>{
+        
+        if(imgUrl!=''){
+            let item =  words.find(el=>el.id==itemId)
+           
+            if(item){    
+                item.img=imgUrl
+                console.log(item)
+                words.splice(itemId,1,item)
+                setIsSetWords(!isSetWords)
+                setWords(words)
+            }
+           }
+          
+    },[imgUrl])
+
+    
+    
+   
    
 
-    
-
+  
     return (
         <div className={styles.createWordItem}>
-            <CreateWordImg words={words} setImg={setImg} setTranslate={setTranslate} setTitle={setTitle}  setWords={setWords} setIndex={setIndex}  count={item.id} />
-            <div className={styles.termBlock}>
-                <Term setIndex={setIndex} count={item.id} title={words[number].title} setTitle={setTitle}  name='Термін'/>
-                <Term setIndex={setIndex} count={item.id} title={words[number].translate} setTranslate={setTranslate}  name='Перевод.'/>
+            <CreateWordImg words={words} setImg={setImg} setTranslate={setTranslate} setTitle={setTitle}  setWords={setWords} itemId={itemId} />
+            <div className={styles.termBlock} >
+                <Term  value={title} setValue={setTitle}  name='Термін'/>
+                <Term  value={translate} setValue={setTranslate}  name='Перевод.'/>
             </div>
         </div>
     )

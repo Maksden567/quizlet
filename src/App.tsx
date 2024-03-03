@@ -1,4 +1,4 @@
-
+            
 import MainPage from './Pages/MainPage/MainPage'
 import ModulePage from './Pages/ModulePage/ModulePage'
 import GamePage from './Pages/GamePage/GamePage'
@@ -17,7 +17,6 @@ import {
   Routes,
 } from 'react-router-dom';
 
-
 function App() {
 
 
@@ -26,10 +25,14 @@ function App() {
     <Router>
       <Routes>
         <Route element={<MainPage/>}  path='/' />
-        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/register" element={<TestPage   />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/modules" element={<ModulePage />} />  
-        <Route path="/games" element={<GamePage />} />  
+        <Route path="/games" element={<GamePage />} /> 
+        <Route path="/modules/:id" element={<WordPage />} /> 
+        <Route path="/createModule" element={<CreateModule />} /> 
+        <Route path="/memorization/:id" element={<MemorizationPage />} /> 
+        <Route path="/words/:id" element={<CardBlockPage />} /> 
       </Routes>
     </Router>
     

@@ -6,53 +6,77 @@ import selectIcon from '../../assets/selectedIcon.png'
 import selectedIcon from '../../assets/selectIcon.png'
 import audioIcon from '../../assets/audioIcon.png'
 import classNames from 'classnames'
+import { selectRandomElements, shuffleArray } from '../../Component/MemorizationBlock/services'
 
-const  MemorizationItemTest:FC<ICardItem> = ({audioUrl,isSelect,text,translateTitle,imgUrl,swiperRef,isTestComponent,index=0,answers,setAnswers}) => {
+const  MemorizationItemTest:FC<ICardItem> = ({isTrueValue,audioUrl,isSelect,allElements,id,text,translateTitle,imgUrl,setIsTrue,setItemId,swiperRef,isTestComponent,unKnowenItems,setUnKnowenItems}) => {
 
     
     const audioElement = useRef<HTMLAudioElement>(null)
-    const [isAnswer,setAnswer] = useState(false)
+    const [isAnswer,setIsAnswer] = useState(false)
     const [activeIndex,setActiveIndex]=useState<number>(0);
-    const answers1:string[] =["potato","cherry","asjcnascnas","avocado"] 
-    const rightIndex = answers1.indexOf(translateTitle)
+    const [arrChoice,setArrChoice]=useState<string[]>()
+    const [rightIndex,setRightAnswer] = useState<number|null>(null)
     const [negativeIndex,setNegativeIndex]=useState<number|null>(null)
 
     const handleClick = () =>{
-        swiperRef?.current?.slideNext()
-        handleAnswer(false)
-    }
-
-    const handleAnswer = (answer:boolean) =>{
-            setAnswer(answer)  
-            if(rightIndex!=activeIndex){  
-                setNegativeIndex(activeIndex)
-            }
+        setActiveIndex(0)
+        setRightAnswer(null)
+        setIsAnswer(false)
+        if(setItemId){
+          setItemId(null)
+        }
+       
+        swiperRef?.current?.slideNext()   
     }
 
     useEffect(()=>{
-    if(answers?.length==0){
-      answers1.map((item=>{
-        answers?.push(answers1[0])
-      }))
-    }
+      console.log(1)
+      const item = allElements.find(el=>el.translateName==translateTitle)
+      if(item){
+        let mass = selectRandomElements(allElements,3,item.translateName)
+        mass.push(item.translateName)
+        mass = shuffleArray(mass)
+        setRightAnswer(mass.indexOf(item.translateName))
+        setArrChoice(mass)
+      }
+      
+
+
+    },[allElements])
    
 
+    const handleAnswer = (answer:boolean) =>{
 
-    },[])
+
+      if(setIsAnswer && setIsTrue && setItemId && setUnKnowenItems){
+
+
+        setIsAnswer(answer)  
+        if(rightIndex!=activeIndex){  
+            setNegativeIndex(activeIndex)
+            setIsTrue(false)
+            setItemId(id)
+            setUnKnowenItems([...unKnowenItems as ICardItem[],{id,allElements,audioUrl,isSelect,text,translateTitle,imgUrl,isTrueValue,setIsTrue,setItemId,setUnKnowenItems,swiperRef,unKnowenItems}])
+        }
+
+        else{
+          setItemId(id)
+          setIsTrue(true)
+        }
+
+      }
+
+            
+    }
+
+    
 
 
     const continueFun = (indexNum:number)=>{
       setActiveIndex(indexNum)
-     
-      if(answers&&setAnswers){
-
-        answers[index] =answers1[indexNum]
-        setAnswers(answers)
-       
-      }
-      
-     
     }
+
+    
 
   return (
     <>
@@ -75,7 +99,7 @@ const  MemorizationItemTest:FC<ICardItem> = ({audioUrl,isSelect,text,translateTi
       <div className={stylesMemorization.textSelected}>Виберіть правильну відповідь</div>
       <div className={stylesMemorization.answers}>
 
-        {answers1.map((item,index)=>(
+        {arrChoice?.map((item,index)=>(
            negativeIndex==null && !isAnswer?<button className={activeIndex==index?stylesMemorization.MemorizationItemTestButtonActive:stylesMemorization.MemorizationItemTestButton} onClick={()=>continueFun(index)}>{item}</button>:
            <button className={classNames(rightIndex==index?stylesMemorization.MemorizationItemTestButtonRight:stylesMemorization.MemorizationItemTestButton,negativeIndex==index?stylesMemorization.MemorizationItemTestButtonNegative:stylesMemorization.MemorizationItemTestButton)}>{item}</button> 
         ))}

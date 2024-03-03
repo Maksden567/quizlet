@@ -2,15 +2,17 @@ import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from './Slices/authSlice'
 import { authApi } from "./rtk/useAuth";
 import { moduleApi } from "./rtk/useModule";
+import { wordApi } from "./rtk/useWord";
 
 const store = configureStore({
     reducer:{
         counterReducer,
         [authApi.reducerPath]: authApi.reducer,
-        [moduleApi.reducerPath]: moduleApi.reducer
+        [moduleApi.reducerPath]: moduleApi.reducer,
+        [wordApi.reducerPath]: wordApi.reducer
     },
     middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(authApi.middleware).concat(moduleApi.middleware),
+    getDefaultMiddleware().concat(authApi.middleware).concat(moduleApi.middleware).concat(wordApi.middleware),
 })
 
 

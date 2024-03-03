@@ -6,12 +6,12 @@ import selectIcon from '../../assets/selectedIcon.png'
 import selectedIcon from '../../assets/selectIcon.png'
 import audioIcon from '../../assets/audioIcon.png'
 
-const  MemorizationItemKnowen:FC<ICardItem> = ({audioUrl,isSelect,text,translateTitle,imgUrl,swiperRef,unKnowenItems,setUnKnowenItems}) => {
+const  MemorizationItemKnowen:FC<ICardItem> = ({id,audioUrl,isSelect,text,translateTitle,imgUrl,swiperRef,allElements,unKnowenItems,setUnKnowenItems,isTrueValue,setIsTrue,setItemId}) => {
 
     
     const audioElement = useRef<HTMLAudioElement>(null)
     const [isKnowen,setKnowen] = useState<boolean|null>(true)
-    const [isAnswer,setAnswer] = useState(false)
+    const [isAnswer,setIsAnswer] = useState(false)
 
 
     const handleClick = () =>{
@@ -21,9 +21,9 @@ const  MemorizationItemKnowen:FC<ICardItem> = ({audioUrl,isSelect,text,translate
 
     const handleAnswer = (answer:boolean) =>{
         if(setUnKnowenItems){
-            setAnswer(answer)
+            setIsAnswer(answer)
             if(isKnowen==false){
-                setUnKnowenItems([...unKnowenItems as ICardItem[],{audioUrl,isSelect,text,translateTitle,imgUrl,setUnKnowenItems,swiperRef,unKnowenItems}])
+                setUnKnowenItems([...unKnowenItems as ICardItem[],{id,allElements,audioUrl,isSelect,text,translateTitle,imgUrl,isTrueValue,setIsTrue,setItemId,setUnKnowenItems,swiperRef,unKnowenItems}])
                 setKnowen(null)
             }
         }

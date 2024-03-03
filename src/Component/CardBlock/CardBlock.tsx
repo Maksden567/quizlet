@@ -14,15 +14,16 @@ import { ICartBlock } from './ICartBlock';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/less/navigation';
+import { useGetWordsQuery } from '../../store/rtk/useWord';
 
 
 
 
-const CardBlock:FC<ICartBlock> = ({items}) => {
+const CardBlock:FC<ICartBlock> = ({id}) => {
 
 
     const swiperRef = useRef<SwiperType>();
-
+    const {data:items} = useGetWordsQuery(id)
     return (
 <>
 
@@ -37,8 +38,8 @@ const CardBlock:FC<ICartBlock> = ({items}) => {
           }}
     >
 
-    {items.map((item, index) => (
-      <SwiperSlide key={index} virtualIndex={index}><CardItem audioUrl={item.audioUrl} isSelect={item.isSelect} text={item.text} translateTitle={item.translateTitle} imgUrl={item.imgUrl}/></SwiperSlide>
+    {items?.map((item, index) => (
+      <SwiperSlide key={index} virtualIndex={index}><CardItem  allElements={items} id={item.wordId} key={index} isTestComponent={false} swiperRef={swiperRef} audioUrl={item.musicUrl} isSelect={item.isKnowen} text={item.nameEnglish} translateTitle={item.translateName} imgUrl={item.imageUrl?item.imageUrl:'' }/></SwiperSlide>
       ))}
     </Swiper>
         </div>

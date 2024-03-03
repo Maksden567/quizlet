@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FC } from "react";
 import { IWordItem} from './IWordItem'
 import styles from './WordItem.module.scss'
@@ -6,9 +6,11 @@ import soundImg from '../../assets/sound.png'
 import starActive from '../../assets/star.png'
 import logo from "../../assets/logo.png"
 import favouriteImg from '../../assets/favourite.png'
+import { ICreateWord } from "../../Pages/CreateModule/ICreateWord";
+import { IWord } from "../../store/rtk/useWord";
 
 
-const WordItem:FC<IWordItem> = (word) => {
+const WordItem:FC<IWord> = ({imageUrl,isKnowen,musicUrl,nameEnglish,translateName,wordId}) => {
     
     const audioElement = useRef<HTMLAudioElement>(null)
     const [isFavourite,setIsFavourite] = useState(false)
@@ -18,12 +20,11 @@ const WordItem:FC<IWordItem> = (word) => {
     }
 
 
-
     return (
        <div className={styles.wordItem}>
             <div className={styles.wordItemWrapper}>
                 <div className={styles.wordTextWithImage}>
-                    <img src={word.img} className={styles.wordImage} alt="" />
+                    <img src={imageUrl?imageUrl:''} className={styles.wordImage} alt="" />
                   
                 </div>
               
@@ -38,7 +39,7 @@ const WordItem:FC<IWordItem> = (word) => {
                             {isFavourite?<img className={styles.star} src={starActive} alt="" />:<img className={styles.star} src={favouriteImg} alt="" />}
                         </button>
                     </div>
-                    <h2 className={styles.wordTitleAndTranslate}>{word.title} - {word.translate}</h2>
+                    <h2 className={styles.wordTitleAndTranslate}>{nameEnglish} - {translateName}</h2>
                     <div className={styles.logo}>
                          <div className={styles.logoItem}>
                         
@@ -51,7 +52,7 @@ const WordItem:FC<IWordItem> = (word) => {
                 
 
             </div>
-            <audio ref={audioElement} src={word.audio} ></audio>
+            <audio ref={audioElement} src={musicUrl} ></audio>
        </div>
     )
 }

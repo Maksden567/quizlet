@@ -13,7 +13,13 @@
 
 }
 
-.imageBlock {}
+.imageBlock {
+    width: 100%;
+    
+    img{
+        width: 100%;
+    }
+}
 
 .Textblock {
 
@@ -23,8 +29,7 @@
     width: 100%;
     padding: 0px 50px;
     box-sizing: border-box;
-   margin-top: 40px;
-    
+   height: 100%;
 }
 
 .TextblockFlex {
@@ -34,8 +39,7 @@
     width: 100%;
     padding: 0px 50px;
     box-sizing: border-box;
-    margin-top: 40px;
-    
+    height: 100%;
    
 }
 
@@ -136,7 +140,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    padding-top: 57px;
+    padding-top: 20px;
     width: 100%;
     flex-direction: row-reverse;
 
@@ -298,7 +302,7 @@
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:455px) {
     .cardItemTitle {
         p {
             font-size: 18px;
@@ -309,26 +313,31 @@
     }
     .card {
         width: 260px;
-        height: 400px;
+        height: 260px;
     }
     .cardItemFront {
         width: 260px;
-        height: 400px;
+        height: 260px;
        
     }
     .cardItemBackActive{
         width: 260px;
-        height: 400px;
+        height: 260px;
         
     }
     .cardItemFrontActive {
         width: 260px;
-        height: 400px;
+        height: 260px;
     }
     .cardItemBack{
         width: 260px;
-        height: 400px;
+        height: 260px;
 
+    }
+    .Textblock {
+
+      padding: 0px 25px;
+        
     }
     
 }

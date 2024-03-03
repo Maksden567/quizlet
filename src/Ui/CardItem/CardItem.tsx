@@ -17,12 +17,12 @@ const CardItem:FC<ICardItem> = ({audioUrl,isSelect,text,translateTitle,imgUrl}) 
   return (
     <>
     <div className={styles.card}>
-    <div className={isFront?styles.cardItemFront:styles.cardItemFrontActive} onClick={()=>setFront(!isFront)}>
+    <div className={isFront?styles.cardItemFront:styles.cardItemFrontActive} >
     <div className={styles.headerItem}>
         <div className={styles.selectIcon}>{isSelect?<img src={selectedIcon} alt="" />:<img src={selectIcon} alt="" />}</div>
        <div className={styles.audioIcon} onClick={()=>audioElement.current?.play()} ><img src={audioIcon} alt="" /></div>
      </div>
-        <div className={imgUrl?styles.Textblock:styles.TextblockFlex}  >
+        <div className={imgUrl?styles.Textblock:styles.TextblockFlex} onClick={()=>setFront(!isFront)} >
         <div className={styles.cardItemTitle}>
             <p>{text}</p>
         </div> 
@@ -33,12 +33,12 @@ const CardItem:FC<ICardItem> = ({audioUrl,isSelect,text,translateTitle,imgUrl}) 
 
  
     </div>
-    <div className={!isFront?styles.cardItemBack:styles.cardItemBackActive} onClick={()=>setFront(!isFront)}>
+    <div className={!isFront?styles.cardItemBack:styles.cardItemBackActive} >
     <div  className={styles.headerItem}>
         <div className={styles.selectIcon}>{isSelect?<img src={selectedIcon} alt="" />:<img src={selectIcon} alt="" />}</div>
        <div className={styles.audioIcon} onClick={()=>{audioElement.current?.play()}} ><img src={audioIcon} alt="" /></div>
      </div>
-    <div className={imgUrl?styles.Textblock:styles.TextblockFlex}  >
+    <div className={imgUrl?styles.Textblock:styles.TextblockFlex} onClick={()=>setFront(!isFront)} >
         <div className={styles.cardItemTitle}>
             <p>{translateTitle}</p>
         </div> 

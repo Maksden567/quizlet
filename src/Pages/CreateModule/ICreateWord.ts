@@ -1,7 +1,8 @@
 export interface ICreateWord {
-    id:number|null
+    id:number
     img:string|null,
     title:string,
     translate:string,
     music:string
+    
 }

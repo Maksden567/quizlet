@@ -5,11 +5,9 @@ import { useEffect, useState } from 'react'
 import errorImg from '../../assets/errorImg.png'
 
 const ModuleBlock = () => {
-    const {data} = useGetLibrariesQuery();
+    const {data=[]} = useGetLibrariesQuery();
 
-    useEffect(()=>{
-       
-    },[data])
+
     return (
 
         <div className={styles.moduleBlock}>

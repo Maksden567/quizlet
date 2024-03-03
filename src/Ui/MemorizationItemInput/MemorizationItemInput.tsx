@@ -7,7 +7,7 @@ import selectIcon from '../../assets/selectedIcon.png'
 import selectedIcon from '../../assets/selectIcon.png'
 import audioIcon from '../../assets/audioIcon.png'
 
-const  MemorizationItemTest:FC<ICardItem> = ({audioUrl,isSelect,text,translateTitle,imgUrl,swiperRef}) => {
+const  MemorizationItemTest:FC<ICardItem> = ({audioUrl,isSelect,text,translateTitle,imgUrl,swiperRef,allElements,id,isTrueValue,setIsTrue,setItemId,setUnKnowenItems,unKnowenItems}) => {
 
     
     const audioElement = useRef<HTMLAudioElement>(null)
@@ -18,21 +18,47 @@ const  MemorizationItemTest:FC<ICardItem> = ({audioUrl,isSelect,text,translateTi
   
 
     const handleClick = () =>{
-        swiperRef?.current?.slideNext()
-        handleAnswer(false)
+       
+        if(setItemId && setIsTrue){
+
+            setAnswer(false)
+            setItemId(null)
+            swiperRef?.current?.slideNext()  
+            setIsTrue(false)
+        }
+ 
+        
     }
 
     const handleAnswer = (answer:boolean) =>{
+
+
+        if(setItemId && setIsTrue && setUnKnowenItems && unKnowenItems) {
             if(isEmpty==null){
                 setIsEmpty(true)
             }
           
             if(!isEmpty && isEmpty!=null){
                 setAnswer(answer)  
-                if(inputText!==translateTitle){
+            if(inputText!==translateTitle){
                 setIsIncorectAnswer(true)
+                setItemId(id)
+                setIsTrue(false)
+                if(unKnowenItems[unKnowenItems.length-1].id!=id){
+                    setUnKnowenItems([...unKnowenItems as ICardItem[],{id,allElements,audioUrl,isSelect,text,translateTitle,imgUrl,isTrueValue,setIsTrue,setItemId,setUnKnowenItems,swiperRef,unKnowenItems}])
+                }
+                
             }
+
+            else{
+                setItemId(id)
+                setIsTrue(true)
             }
+
+            }
+        }
+
+           
             
     }
 
@@ -40,7 +66,6 @@ const  MemorizationItemTest:FC<ICardItem> = ({audioUrl,isSelect,text,translateTi
 
     const handleInput=(e:React.ChangeEvent<HTMLInputElement>)=>{
         setInputText(e.target.value)
-        console.log(e.target.value)
         if(e.target.value==''){
             setIsEmpty(true)
         }else{

@@ -1,5 +1,5 @@
 .buttons{
-    margin-top: 20px;
+    margin-top: 5px;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -87,6 +87,14 @@
     margin-top: 400px;
 }
 
+.imageBlock{
+    width: 100%;
+
+    img{
+        width: 100%;
+    }
+}
+
 @media screen and (max-width:768px) {
     .button{
         margin-top: 450px;
@@ -105,14 +113,18 @@
         flex-direction: column;
    }
    .MemorizationItemKnowenButton{
+    margin: 0;
     margin-top: 10px;
    }
    .MemorizationItemKnowenButtonActive{
+    margin: 0;
     margin-top: 10px;
+   
    }
    .buttonsCenter{
     flex-direction: column;
    }
+
 }
 
 @media screen and (max-width:400px) {

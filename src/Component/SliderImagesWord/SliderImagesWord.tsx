@@ -5,12 +5,19 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import styles from './SliderImages.module.scss'
-
+import { FC } from 'react';
 
 // import required modules
 import { Pagination } from 'swiper/modules';
 
- function SliderImagesWord() {
+interface  ISliderImagesWord {
+  name:string
+}
+
+
+const SliderImagesWord:FC<ISliderImagesWord> = ({name}) => {
+
+ 
 
     const arr:string[] = [
         "https://southernenglishcollege.nsw.edu.au/wp-content/uploads/2023/02/english-british-england-language-education-concept-min-scaled.jpg",
@@ -20,7 +27,7 @@ import { Pagination } from 'swiper/modules';
 
   return (
     <>
-    <h1 className={styles.titleModule}>English</h1>
+    <h1 className={styles.titleModule}>{name}</h1>
       <Swiper
         spaceBetween={30}
         pagination={{
